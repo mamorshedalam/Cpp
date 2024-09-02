@@ -5,19 +5,19 @@ using namespace std;
 int main()
 {
      double sales = 95000;
-     double stateTax = 4;
-     double countryTax = 2;
-     double totalStateTax, totalCountryTax, totalSales, totalTax;
+     const double stateTaxRate = 4;
+     const double countryTaxRate = 2;
+     double stateTax, countryTax, totalSales, totalTax;
 
-     totalStateTax = (sales * stateTax) / 100;
-     totalCountryTax = (sales * countryTax) / 100;
-     totalTax = totalStateTax + totalCountryTax;
+     stateTax = (sales * stateTaxRate) / 100;
+     countryTax = (sales * countryTaxRate) / 100;
+     totalTax = stateTax + countryTax;
 
      totalSales = sales - totalTax;
 
      cout << "Sales : $" << sales << endl;
-     cout << "State Tax : $" << totalStateTax << endl;
-     cout << "Country Tax : $" << totalCountryTax << endl;
+     cout << "State Tax : $" << stateTax << endl;
+     cout << "Country Tax : $" << countryTax << endl;
      cout << "--------------------" << endl;
      cout << "Total Tax : $" << totalTax << endl;
      cout << "Total Sales : $" << totalSales << endl;
